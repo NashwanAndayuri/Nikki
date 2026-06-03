@@ -3,16 +3,28 @@
 [ext_resource type="Script" uid="uid://bv1a8ug8oxjs1" path="res://objects/player/SwingSwong.gd" id="1_46rls"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8jmh"]
+size = Vector2(512, 20)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_46rls"]
 
-[node name="Rope" type="Node2D" unique_id=873527753 node_paths=PackedStringArray("grapple_anchor", "player_anchor", "rope")]
+[node name="Rope" type="Node2D" unique_id=873527753 node_paths=PackedStringArray("grapple_anchor", "player_anchor", "rope", "interaction_area")]
 script = ExtResource("1_46rls")
 grapple_anchor = NodePath("Anchor")
 player_anchor = NodePath("PlayerAnchor")
 rope = NodePath("Rope")
+interaction_area = NodePath("InteractionArea")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=2024232679]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=152516602]
+shape = SubResource("RectangleShape2D_o8jmh")
+
+[node name="Polygon2D" type="Polygon2D" parent="InteractionArea" unique_id=1885686]
+polygon = PackedVector2Array(0, -7, -6, 0, 0, 5, 6, 0)
 
 [node name="Anchor" type="StaticBody2D" parent="." unique_id=848605469]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Anchor" unique_id=374227919]
 shape = SubResource("RectangleShape2D_o8jmh")
@@ -21,15 +33,19 @@ shape = SubResource("RectangleShape2D_o8jmh")
 polygon = PackedVector2Array(0, -7, -6, 0, 0, 5, 6, 0)
 
 [node name="Rope" type="Line2D" parent="." unique_id=1617392459]
+visible = false
 points = PackedVector2Array(0, -1, 0, 66)
 width = 0.655
 
 [node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=304915511]
+visible = false
 node_a = NodePath("../Anchor")
 node_b = NodePath("../PlayerAnchor")
 
 [node name="PlayerAnchor" type="RigidBody2D" parent="." unique_id=216528605]
+visible = false
 position = Vector2(0, 66)
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAnchor" unique_id=101621605]
 shape = SubResource("CircleShape2D_46rls")

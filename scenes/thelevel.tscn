@@ -797,5 +797,33 @@ scale = Vector2(1, 1)
 position = Vector2(168, -0.3333435)
 scale = Vector2(1, 1)
 
-[node name="Rope" parent="." unique_id=873527753 instance=ExtResource("10_ei1lj")]
-position = Vector2(650, 359)
+[node name="enemy3" parent="theLevel/Enemies" unique_id=96160205 instance=ExtResource("9_bs8ux")]
+position = Vector2(-65.66667, -1.3333435)
+scale = Vector2(1, 1)
+
+[node name="enemy4" parent="theLevel/Enemies" unique_id=2004105542 instance=ExtResource("9_bs8ux")]
+position = Vector2(-119.66669, -1.6666769)
+scale = Vector2(1, 1)
+
+[node name="enemy5" parent="theLevel/Enemies" unique_id=588659158 instance=ExtResource("9_bs8ux")]
+position = Vector2(77.33333, -0.3333435)
+scale = Vector2(1, 1)
+
+[node name="enemy6" parent="theLevel/Enemies" unique_id=378186547 instance=ExtResource("9_bs8ux")]
+position = Vector2(263, -1.6666769)
+scale = Vector2(1, 1)
+
+[node name="Rope" type="Node2D" parent="." unique_id=736584880]
+position = Vector2(-0.00012207031, 0)
+
+[node name="Rope" parent="Rope" unique_id=873527753 instance=ExtResource("10_ei1lj")]
+position = Vector2(1734.0001, 88)
+
+[node name="Rope2" parent="Rope" unique_id=1509927433 instance=ExtResource("10_ei1lj")]
+position = Vector2(735.0001, 196)
+
+[node name="Rope3" parent="Rope" unique_id=1459813083 instance=ExtResource("10_ei1lj")]
+position = Vector2(2250, 87)
+
+[node name="Rope4" parent="Rope" unique_id=1699078226 instance=ExtResource("10_ei1lj")]
+position = Vector2(2765, 87)

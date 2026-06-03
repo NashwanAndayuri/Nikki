@@ -9,6 +9,14 @@ extends CharacterBody2D
 var is_grappling: bool = false
 var is_grounded = true
 var is_moving: bool
+var grapable: bool
+
+func is_grapable():
+	grapable = true
+
+func is_nnot_grapable():
+	grapable = false
+
 func animation():
 	var right = Input.is_action_pressed("d")
 	var left = Input.is_action_pressed("a")
@@ -25,8 +33,9 @@ func animation():
 		sprite.play("idle")
 	
 func side_move():
-	if not is_grappling:
-		velocity.x = 0
+	
+		if is_on_floor():
+			velocity.x = 0
 		var right = Input.is_action_pressed("d")
 		var left = Input.is_action_pressed("a")
 		var dash = Input.is_action_pressed("lsft")
@@ -46,9 +55,6 @@ func side_move():
 			velocity.x = -1 * speed * dash_multiplier
 
 
-
-
-
 func jump():
 	var jump = Input.is_action_just_pressed("spc")
 	
@@ -58,24 +64,25 @@ func jump():
 		sprite.play("jump")
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_grappling:
-		if not is_on_floor():
-			velocity = velocity + get_gravity() * delta * 2
+	# Add the gravity
+	if not is_on_floor():
+		velocity = velocity + get_gravity() * delta * 2
 	
-	if Input.is_action_just_pressed("C"):
+	if Input.is_action_pressed("C"):
+		is_grappling = true
 		for grappling_hook_system in get_tree().get_nodes_in_group("grappling-hook-system"):
 			var success = grappling_hook_system.attach_player(self)
 			if success == 0:
-				is_grappling = true
 				break	
 	elif Input.is_action_just_released("C"):
+		is_grappling = false
 		for grappling_hook_system in get_tree().get_nodes_in_group("grappling-hook-system"):
 			var success = grappling_hook_system.detach_player(self)
 			if success == 0:
-				is_grappling = false
+
 				break
-	side_move()
+	if not is_grappling:
+		side_move()
 	animation()
 	jump()
 	move_and_slide()

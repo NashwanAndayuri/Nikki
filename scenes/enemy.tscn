@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://k0dljqs5btn0" path="res://assets/Snail/Walk (38x24).png" id="1_1pe4n"]
 [ext_resource type="Script" uid="uid://bgugt633i663x" path="res://scripts/enemy.gd" id="1_w6728"]
-[ext_resource type="PackedScene" uid="uid://f3u11nm8uydc" path="res://objects/player/rope.tscn" id="3_4ra3w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w6728"]
 atlas = ExtResource("1_1pe4n")
@@ -106,10 +105,6 @@ shape = SubResource("CircleShape2D_ibhmd")
 [node name="Timer" type="Timer" parent="." unique_id=1896596021]
 wait_time = 2.0
 autostart = true
-
-[node name="Rope" parent="." unique_id=873527753 instance=ExtResource("3_4ra3w")]
-rotation = 1.5707964
-scale = Vector2(0.5, 0.5)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -178,7 +178,10 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g7ett"]
 radius = 6.0
-height = 20.0
+height = 44.0
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_gnkmh"]
+length = 256.0
 
 [node name="player" type="CharacterBody2D" unique_id=1671881700]
 position = Vector2(-1, -24)
@@ -186,6 +189,7 @@ script = ExtResource("1_43vyn")
 speed = 500.0
 
 [node name="Animation" type="AnimatedSprite2D" parent="." unique_id=1179962073]
+position = Vector2(2, -4)
 sprite_frames = SubResource("SpriteFrames_b1vji")
 animation = &"land"
 autoplay = "idle"
@@ -194,10 +198,17 @@ frame_progress = 1.0
 speed_scale = 1.51
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=694784351]
-position = Vector2(3, 14)
+position = Vector2(5, 2)
 shape = SubResource("CapsuleShape2D_g7ett")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1083075151]
 position = Vector2(3, -22)
+
+[node name="InteractinoArea" type="Area2D" parent="." unique_id=1145878068]
+position = Vector2(5, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractinoArea" unique_id=1798447032]
+rotation = -3.1415927
+shape = SubResource("SeparationRayShape2D_gnkmh")
 
 [connection signal="animation_finished" from="Animation" to="." method="_on_animation_animation_finished"]
