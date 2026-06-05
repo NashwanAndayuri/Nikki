@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://co1wus7o6xdai"]
+
+[ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_wv5lq"]
+[ext_resource type="Texture2D" uid="uid://dabw1ytcti50a" path="res://assets/29.5.26.png" id="2_erk2x"]
+
+[node name="WinScreen" type="Control" unique_id=1569122770]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wv5lq")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="." unique_id=776433170]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.5
+offset_top = -74.5
+offset_right = 15.5
+offset_bottom = -51.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU WIN"
+
+[node name="ReturnButton" type="Button" parent="." unique_id=153241637]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.65300006
+anchor_right = 0.50100005
+anchor_bottom = 0.65300006
+offset_left = -84.5
+offset_top = -74.73105
+offset_right = 44.592957
+offset_bottom = -43.73105
+grow_horizontal = 2
+grow_vertical = 2
+text = "Return to Menu"
+
+[node name="Quit Button" type="Button" parent="." unique_id=2018601751]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47900003
+anchor_top = 0.66
+anchor_right = 0.47900003
+anchor_bottom = 0.66
+offset_left = -27.453033
+offset_top = -15.820007
+offset_right = 27.546967
+offset_bottom = 15.179993
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2078601082]
+z_index = -1
+position = Vector2(428.00003, 396.00003)
+scale = Vector2(0.19612531, 0.19612533)
+texture = ExtResource("2_erk2x")
+
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=1299527092]
+position = Vector2(419, 394)
+zoom = Vector2(1.5, 1.5)
+limit_left = -36
+limit_top = 59
+limit_right = 10000011
+limit_bottom = 779
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.15
+drag_right_margin = 0.15
+drag_bottom_margin = 0.15
+
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="Quit Button" to="." method="_on_quit_button_pressed"]

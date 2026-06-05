@@ -1,0 +1,3 @@
+res://scenes/test_level.tscn
+res://scripts/next_level.gd
+res://scenes/win_screen.tscn
