@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://jaevkrsipc6w"
+path="res://.godot/imported/Faith.mp3-bc13639ac5ce803d29b6e982d663fb39.mp3str"
+
+[deps]
+
+source_file="res://assets/Background layers/Faith.mp3"
+dest_files=["res://.godot/imported/Faith.mp3-bc13639ac5ce803d29b6e982d663fb39.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

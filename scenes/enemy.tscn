@@ -1,47 +1,36 @@
 [gd_scene format=3 uid="uid://ccs5w1dgv7uqe"]
 
-[ext_resource type="Texture2D" uid="uid://k0dljqs5btn0" path="res://assets/Snail/Walk (38x24).png" id="1_1pe4n"]
 [ext_resource type="Script" uid="uid://bgugt633i663x" path="res://scripts/enemy.gd" id="1_w6728"]
 [ext_resource type="Texture2D" uid="uid://by7sv7ew4rcry" path="res://assets/enemy.png" id="3_4ra3w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w6728"]
-atlas = ExtResource("1_1pe4n")
 region = Rect2(0, 0, 38, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ercyu"]
-atlas = ExtResource("1_1pe4n")
 region = Rect2(38, 0, 38, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_boeop"]
-atlas = ExtResource("1_1pe4n")
 region = Rect2(76, 0, 38, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h6bod"]
-atlas = ExtResource("1_1pe4n")
 region = Rect2(114, 0, 38, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_64yxp"]
-atlas = ExtResource("1_1pe4n")
 region = Rect2(152, 0, 38, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wthhu"]
-atlas = ExtResource("1_1pe4n")
 region = Rect2(190, 0, 38, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e0c4v"]
-atlas = ExtResource("1_1pe4n")
 region = Rect2(228, 0, 38, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3nr5y"]
-atlas = ExtResource("1_1pe4n")
 region = Rect2(266, 0, 38, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_woufr"]
-atlas = ExtResource("1_1pe4n")
 region = Rect2(304, 0, 38, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vpenp"]
-atlas = ExtResource("1_1pe4n")
 region = Rect2(342, 0, 38, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5uy6h"]
