@@ -19,7 +19,7 @@ config/icon="res://objects/player/icon.svg"
 
 window/size/viewport_width=903
 window/size/viewport_height=507
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [input]
 
