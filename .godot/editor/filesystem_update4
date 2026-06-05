@@ -1,5 +1,1 @@
-res://scenes/next_level_test.tscn
 res://scenes/test_level.tscn
-res://objects/player/player.tscn
-res://scripts/win_screen.gd
-res://scenes/win_screen.tscn
