@@ -17,8 +17,8 @@ config/icon="res://objects/player/icon.svg"
 
 [display]
 
-window/size/viewport_width=907
-window/size/viewport_height=727
+window/size/viewport_width=903
+window/size/viewport_height=507
 window/stretch/mode="canvas_items"
 
 [input]

@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://1nfdipe86i2h"]
+[gd_scene format=3 uid="uid://bth1m72q1fhpa"]
 
-[ext_resource type="Script" uid="uid://cj5ha6hs0a35h" path="res://scripts/intro_1.gd" id="1_kehvq"]
+[ext_resource type="Script" path="res://scripts/intro_1.gd" id="1_kehvq"]
 [ext_resource type="Texture2D" uid="uid://b0hg0spnrlvde" path="res://assets/pg 1.png" id="2_b2jc3"]
 
 [node name="intro1" type="Control" unique_id=407970248]
@@ -13,16 +13,18 @@ grow_vertical = 2
 script = ExtResource("1_kehvq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1689164814]
-position = Vector2(454.22223, 356.625)
+position = Vector2(452.6667, 254.62502)
 scale = Vector2(0.2357639, 0.2357639)
 texture = ExtResource("2_b2jc3")
+metadata/_edit_group_ = true
 
 [node name="Button" type="Button" parent="." unique_id=1041418114]
 layout_mode = 0
-offset_left = 847.0
-offset_top = 103.0
-offset_right = 906.0
-offset_bottom = 139.0
+offset_left = 845.44446
+offset_top = 1.0000305
+offset_right = 904.44446
+offset_bottom = 37.00003
 text = "NEXT"
+metadata/_edit_group_ = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
