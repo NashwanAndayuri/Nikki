@@ -1,1 +1,5 @@
+res://objects/player/player.tscn
+res://scripts/player.gd
+res://objects/player/rope.tscn
+res://objects/player/SwingSwong.gd
 res://scenes/test_level.tscn

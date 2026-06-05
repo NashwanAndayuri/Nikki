@@ -8,9 +8,6 @@ extends Node2D
 @export var max_radius: float = 512
 @export var tetherForceFactor= 0.25
 
-var anchorPos : Vector2
-
-var is_grappling: bool
 
 func _ready():
 	add_to_group("grappling-hook-system")
@@ -18,7 +15,6 @@ func _ready():
 	player_anchor.visible = false
 
 var player_original_parent: Node = null
-var rope_original_parent: Node = null
 
 func attach_player(player: Node2D) -> int:
 	if self.global_position.distance_to(player.global_position) > max_radius or player_original_parent != null:
@@ -28,31 +24,30 @@ func attach_player(player: Node2D) -> int:
 		var playerPos= player.position
 		var tetherDir = anchorPos-playerPos
 		var tetherDistance = anchorPos.distance_to(player.global_position)
-	
 		var tetherXVelocity = tetherDir.x*tetherForceFactor
 		player.velocity.x+=tetherXVelocity
 		var tetherYVelocity = tetherDir.y*tetherForceFactor
 		player.velocity.y+=tetherYVelocity
-		print(tetherDir)
-	
+		
 	
 	#player_original_parent = player.get_parent()
 	#player_anchor.global_position = player.global_position # Set the player_anchor to the player's global position
 	#player.reparent(player_anchor) # Make the player a child of player_anchor
 	#player.position = Vector2.ZERO
-	rope_original_parent = rope.get_parent()
-	rope.points[0] = rope.to_local($Anchor.global_position)
-	rope.points[1] = rope.to_local(player.global_position)
-
 	rope.visible = true
+	if rope.visible:
+		rope.points[0] = rope.to_local($Anchor.global_position)
+		rope.points[1] = rope.to_local(player.global_position)
+
+	
 	player_anchor.visible = true
 	return 0
 	
-func anchor_position(player: Node2D) -> Vector2:
+func get_anchor_point(player: Node2D) -> Vector2:
+	var point = Vector2(0,0)
 	if player.position.x < self.global_position.x+256 and player.position.x >= self.global_position.x-256:
-		var anchorPos= $Anchor.global_position
-	
-	return anchorPos
+		point= $Anchor.global_position
+	return point
 
 func detach_player(player: Node2D) -> int:
 	if player_original_parent == null:
@@ -67,7 +62,8 @@ func detach_player(player: Node2D) -> int:
 
 # Process to handle player input and swinging
 func _physics_process(_delta):
-	#if rope.visible:
+	if rope.visible:
+		pass
 		# Use to_local() to correctly map global positions into Line2D local space
 		#rope.points[0] = rope.to_local($Anchor.global_position)
 		#rope.points[1] = rope.to_local(player_anchor.global_position)

@@ -9,15 +9,11 @@ extends CharacterBody2D
 var is_grappling: bool = false
 var is_grounded = true
 var is_moving: bool
-var grapable: bool
-var  pos_last_grapple: Vector2
+var grapable: bool = false
+var grappling: bool = false
+var lastHookedPosition : Vector2
 
 
-func is_grapable():
-	grapable = true
-
-func is_nnot_grapable():
-	grapable = false
 
 func animation():
 	var right = Input.is_action_pressed("d")
@@ -59,6 +55,7 @@ func side_move():
 			velocity.x = 0
 
 
+
 func jump():
 	var jump = Input.is_action_just_pressed("spc")
 	
@@ -67,28 +64,40 @@ func jump():
 		velocity.y = jump_speed
 		sprite.play("jump")
 
+
+#
 func _physics_process(delta: float) -> void:
 	# Add the gravity
 	if not is_on_floor():
 		velocity = velocity + get_gravity() * delta * 2
 	
 	if Input.is_action_just_pressed("C"):
-		
+		var hookdistance = 512
+		print("c pressed")
+		for hook in get_tree().get_nodes_in_group("grappling-hook-system"):
+			var newDistance =self.position.distance_to(hook.position)
+			if newDistance<hookdistance:
+				hookdistance=newDistance
+				lastHookedPosition = hook.position
+		print(lastHookedPosition)
+				
+	
+	if Input.is_action_pressed("C"): 	
 		for grappling_hook_system in get_tree().get_nodes_in_group("grappling-hook-system"):
-			var success = grappling_hook_system.attach_player(self)
-			var a = grappling_hook_system.anchorPos
-			print(a)
+			var success : int
+			if grappling_hook_system.position != lastHookedPosition:
+				success = grappling_hook_system.detach_player(self)
+			else:
+				success = grappling_hook_system.attach_player(self)
 			if success == 0:
-				break 
-	elif Input.is_action_just_released("C"):
-		grapable = true
-		is_grappling = false
+				break	
+				
+	elif Input.is_action_just_pressed("C"):
 		for grappling_hook_system in get_tree().get_nodes_in_group("grappling-hook-system"):
 			var success = grappling_hook_system.detach_player(self)
 			if success == 0:
-
 				break
-	
+				
 	if not is_grappling:
 		side_move()
 	animation()

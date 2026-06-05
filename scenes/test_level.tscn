@@ -1116,7 +1116,7 @@ position = Vector2(3679, 211)
 [node name="next_level_point" type="Node" parent="." unique_id=1257338727]
 
 [node name="NextLevel2" parent="next_level_point" unique_id=964769443 instance=ExtResource("8_ahbqi")]
-position = Vector2(657, 643.00006)
+position = Vector2(4131.9995, 305)
 scale = Vector2(-5, 5)
 
 [node name="player" parent="." unique_id=1671881700 instance=ExtResource("5_tmr53")]
