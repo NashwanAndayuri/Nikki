@@ -1,15 +1,14 @@
 [gd_scene format=4 uid="uid://dopexgclf371i"]
 
-[ext_resource type="Script" uid="uid://ctiuvun7vo7ot" path="res://scripts/main.gd" id="1_dooig"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_dooig"]
 [ext_resource type="PackedScene" uid="uid://c3lfgymhsn4w2" path="res://objects/player/player.tscn" id="2_btg8i"]
-[ext_resource type="Texture2D" uid="uid://cdbcvk4chrkox" path="res://levels/tileset.png" id="2_cqjdl"]
-[ext_resource type="Texture2D" uid="uid://37x17n70byhm" path="res://assets/Background layers/Layer_0002_7.png" id="2_uk87w"]
-[ext_resource type="Texture2D" uid="uid://cb304jh6m2eyd" path="res://assets/Background layers/Layer_0006_4.png" id="3_uk87w"]
-[ext_resource type="Texture2D" uid="uid://dkns3ckve8i35" path="res://assets/Background layers/Layer_0009_2.png" id="4_nrm01"]
-[ext_resource type="PackedScene" uid="uid://dgt5nmkf1818a" path="res://scenes/kill_zone.tscn" id="6_d8ftt"]
-[ext_resource type="PackedScene" uid="uid://dmhewltddbel3" path="res://scenes/next_level_test.tscn" id="7_uk87w"]
-[ext_resource type="PackedScene" uid="uid://ccs5w1dgv7uqe" path="res://scenes/enemy.tscn" id="9_bs8ux"]
-[ext_resource type="PackedScene" uid="uid://f3u11nm8uydc" path="res://objects/player/rope.tscn" id="10_ei1lj"]
+[ext_resource type="Texture2D" path="res://levels/tileset.png" id="2_cqjdl"]
+[ext_resource type="Texture2D" path="res://assets/Background layers/Layer_0002_7.png" id="2_uk87w"]
+[ext_resource type="Texture2D" path="res://assets/Background layers/Layer_0006_4.png" id="3_uk87w"]
+[ext_resource type="Texture2D" path="res://assets/Background layers/Layer_0009_2.png" id="4_nrm01"]
+[ext_resource type="PackedScene" path="res://scenes/next_level_test.tscn" id="7_uk87w"]
+[ext_resource type="PackedScene" path="res://scenes/enemy.tscn" id="9_bs8ux"]
+[ext_resource type="PackedScene" path="res://objects/player/rope.tscn" id="10_ei1lj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_btg8i"]
 texture = ExtResource("2_cqjdl")
@@ -696,12 +695,6 @@ texture = ExtResource("2_cqjdl")
 [sub_resource type="TileSet" id="TileSet_bs8ux"]
 sources/0 = SubResource("TileSetAtlasSource_nrm01")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d8ftt"]
-distance = -129.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8ftt"]
-size = Vector2(43, 91)
-
 [node name="main" type="Node2D" unique_id=933463679]
 script = ExtResource("1_dooig")
 
@@ -736,7 +729,6 @@ texture = ExtResource("4_nrm01")
 [node name="player" parent="theLevel" unique_id=1671881700 instance=ExtResource("2_btg8i")]
 z_index = 2
 position = Vector2(99.00001, 737)
-scale = Vector2(3, 3)
 speed = 300.0
 
 [node name="Camera2D2" type="Camera2D" parent="theLevel/player" unique_id=1716259004]
@@ -767,16 +759,6 @@ show_behind_parent = true
 tile_map_data = PackedByteArray("AAD//wAAAAAEAAYAAAD//wEAAAAEAAcAAAD//wIAAAAEAAcAAAD//wMAAAAEAAcAAAD//wQAAAAEAAcAAAD//wUAAAAEAAcAAAD//wYAAAAEAAcAAAD//wcAAAAEAAcAAAD//wgAAAAEAAcAAAD//wkAAAAEAAcAAAD//woAAAAEAAcAAAD//wsAAAAEAAcAAAD//wwAAAAEAAcAAAD//w0AAAAEAAcAAAD//w4AAAAEAAcAAAD//w8AAAAEAAcAAAD//xAAAAAEAAcAAAD//xEAAAAEAAcAAAD//xIAAAAEAAgAAAAAAAAAAAAFAAYAAAAAAA0AAAAaAAsAAAAAABIAAAAFAAgAAAABAAAAAAAFAAYAAAABABIAAAAFAAgAAAACAAAAAAAFAAYAAAACABIAAAAFAAgAAAADAAAAAAAFAAYAAAADABIAAAAFAAgAAAAEAAAAAAAFAAYAAAAEABIAAAAFAAgAAAAFAAAAAAAFAAYAAAAFABIAAAAFAAgAAAAGAAAAAAAFAAYAAAAGABIAAAAFAAgAAAAHAAAAAAAFAAYAAAAHABIAAAAFAAgAAAAIAAAAAAAFAAYAAAAIABIAAAAFAAgAAAAJAAAAAAAFAAYAAAAJABIAAAAFAAgAAAAKAAAAAAAFAAYAAAAKABIAAAAFAAgAAAALAAAAAAAFAAYAAAALABIAAAAFAAgAAAAMAAAAAAAFAAYAAAAMABIAAAAFAAgAAAANAAAAAAAFAAYAAAANABIAAAAFAAgAAAAOAAAAAAAFAAYAAAAOABIAAAAFAAgAAAAPAAAAAAAFAAYAAAAPABIAAAAFAAgAAAAQAAAAAAAFAAYAAAAQABIAAAAFAAgAAAARAAAAAAAFAAYAAAARABIAAAAFAAgAAAASAAAAAAAFAAYAAAASABIAAAAFAAgAAAATAAAAAAAFAAYAAAATABIAAAAFAAgAAAAUAAAAAAAFAAYAAAAUABIAAAAFAAgAAAAVAAAAAAAFAAYAAAAVABIAAAAFAAgAAAAWAAAAAAAFAAYAAAAWABIAAAAFAAgAAAAXAAAAAAAFAAYAAAAXABIAAAAFAAgAAAAYAAAAAAAFAAYAAAAYABIAAAAFAAgAAAAZAAAAAAAFAAYAAAAZABIAAAAFAAgAAAAaAAAAAAAFAAYAAAAaABIAAAAFAAgAAAAbAAAAAAAFAAYAAAAcAAAAAAAFAAYAAAAdAAAAAAAFAAYAAAAeAAAAAAAFAAYAAAAfAAAAAAAFAAYAAAAQAAwAAAAaAAsAAAAQAA0AAAAaAAsAAAAQAA4AAAAaAAsAAAAQAA8AAAAaAAsAAAAQABAAAAAaAAsAAAAPABAAAAAaAAsAAAAOABAAAAAaAAsAAAANABAAAAAaAAsAAAAMABAAAAAaAAsAAAALABAAAAAaAAsAAAAKABAAAAAaAAsAAAANAA8AAAAaAAsAAAAOAA8AAAAaAAsAAAAPAA8AAAAaAAsAAAARAAkAAAAZAAoAAAARAAoAAAAZAAsAAAARAAsAAAAZAAoAAAARAAwAAAAZAAsAAAARAA0AAAAZAAoAAAARAA4AAAAZAAsAAAARAA8AAAAZAAoAAAARABAAAAAZAAsAAAAKAAMAAAAdAAcAAAAXAAMAAAAIAAEAADAWAAMAAAAJAAEAADAVAAMAAAAKAAEAADAPAAgAAAAIAAEAAEAPAAkAAAAJAAEAAEAPAAoAAAAKAAEAAEANAAcAAAAdAAcAAAARAAgAAAAZAAsAAAARAAcAAAAZAAoAAAASAAcAAAAZAAwAAAASAAgAAAAZAAsAAAASAAkAAAAZAAoAAAASAAoAAAAZAAsAAAASAAsAAAAZAAoAAAASAAwAAAAZAAsAAAASAA0AAAAZAAoAAAASAA4AAAAZAAsAAAASAA8AAAAZAAoAAAASABAAAAAZAAsAAAATABAAAAAaAAsAAAAUABAAAAAaAAsAAAAVABAAAAAaAAsAAAAWABAAAAAaAAsAAAAXABAAAAAaAAsAAAAYABAAAAAaAAsAAAAZABAAAAAaAAsAAAAaABAAAAAZAAsAAAAaAA8AAAAZAAoAAAAaAA4AAAAZAAoAAAAZAA4AAAARAA0AAHAYAA4AAAARAA4AAHAYAA8AAAAaAAsAAAAXAA8AAAAaAAsAAAAWAA8AAAAaAAsAAAAVAA8AAAAaAAsAAAAUAA8AAAAaAAsAAAATAA8AAAAaAAsAAAATAA4AAAARAA8AAHAUAA4AAAARAA4AAHAVAA4AAAARAA0AAHAWAA4AAAARAA8AAHAXAA4AAAARAA4AAHAZAA0AAAAaAAsAAAAaAA0AAAAZAAsAAAAYAA0AAAAUAAsAAAAXAA0AAAATAAsAAAAWAA0AAAASAAsAAAAVAA0AAAAYAAYAAFAUAA0AAAAYAAcAAGATAA0AAAAaAAsAAAATAAcAAAAaAAwAAAAUAAcAAAAaAAwAAAAVAAcAAAAaAAwAAAAWAAcAAAAaAAwAAAAXAAcAAAAaAAwAAAAYAAcAAAAaAAwAAAAZAAcAAAAaAAwAAAAaAAcAAAAZAAwAAAAaAAgAAAAZAAoAAAAaAAkAAAAZAAsAAAAaAAoAAAAZAAoAAAAaAAsAAAAZAAsAAAAaAAwAAAAZAAoAAAAZAA8AAAAaAAsAAAATAAgAAAAWAAgAAAATAAkAAAAWAAkAAAAUAAgAAAAXAAgAAAAUAAkAAAAXAAkAAAAVAAgAAAAYAAgAAAAVAAkAAAAYAAkAAAAXAAoAAAAWAAgAAAAXAAsAAAAWAAkAAAAYAAoAAAAXAAgAAAAYAAsAAAAXAAkAAAAZAAoAAAAYAAgAAAAZAAsAAAAYAAkAAAATAAoAAAAYAAYAAAAUAAoAAAAZAAYAAAAUAAwAAAAYAAcAAGAUAAsAAAAZAAcAAGAVAAsAAAAYAAYAAFAVAAwAAAAYAAYAAFAVAAoAAAAZAAcAAAAWAAoAAAAQAA0AAAAWAAsAAAAQAA4AAAAWAAwAAAARAAsAAAAZAAwAAAAaAAsAAAAYAAwAAAAaAAsAAAAXAAwAAAAaAAsAAAATAAsAAAAaAAsAAAATAAwAAAAaAAsAAAAWAAgAAAAaAAsAAAAWAAkAAAAaAAsAAAAXAAkAAAAaAAsAAAAYAAkAAAAaAAsAAAAYAAgAAAAaAAsAAAAXAAgAAAAaAAsAAAAZAAgAAAAaAAsAAAAZAAkAAAAaAAsAAAA=")
 tile_set = SubResource("TileSet_bs8ux")
 collision_enabled = false
-
-[node name="KillZone" parent="theLevel" unique_id=6448840 instance=ExtResource("6_d8ftt")]
-
-[node name="DropArea" type="CollisionShape2D" parent="theLevel/KillZone" unique_id=1184644234]
-shape = SubResource("WorldBoundaryShape2D_d8ftt")
-
-[node name="KillerObject" type="CollisionShape2D" parent="theLevel/KillZone" unique_id=1432074969]
-position = Vector2(485, -468)
-shape = SubResource("RectangleShape2D_d8ftt")
-disabled = true
 
 [node name="next_level_point" type="Node" parent="theLevel" unique_id=774722868]
 
