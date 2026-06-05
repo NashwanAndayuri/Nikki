@@ -49,6 +49,3 @@ collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAnchor" unique_id=101621605]
 shape = SubResource("CircleShape2D_46rls")
-
-[node name="Polygon2D" type="Polygon2D" parent="PlayerAnchor" unique_id=1904344598]
-polygon = PackedVector2Array(1, -9, -9, 0, 0, 9, 10, 0)

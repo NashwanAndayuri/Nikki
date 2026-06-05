@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqw1xmdrk7uob"
-path="res://.godot/imported/ENDFIELD_SHARE_1770465686.png-587aa7a389f3b3a97224caba27a00afa.ctex"
+uid="uid://by7sv7ew4rcry"
+path="res://.godot/imported/enemy.png-63f114c7bb3f2105c232c34f647cbc2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ENDFIELD_SHARE_1770465686.png"
-dest_files=["res://.godot/imported/ENDFIELD_SHARE_1770465686.png-587aa7a389f3b3a97224caba27a00afa.ctex"]
+source_file="res://assets/enemy.png"
+dest_files=["res://.godot/imported/enemy.png-63f114c7bb3f2105c232c34f647cbc2d.ctex"]
 
 [params]
 
