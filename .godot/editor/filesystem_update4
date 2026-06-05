@@ -1,2 +1,14 @@
 res://scenes/test_level.tscn
 res://objects/player/rope.tscn
+res://scenes/enemy.tscn
+res://scenes/test_level.gd
+res://scenes/title_screen.gd
+res://scenes/title_screen.tscn
+res://scenes/win_screen.tscn
+res://scripts/win_screen.gd
+res://scripts/intro_1.gd
+res://scripts/intro_1.tscn
+res://scripts/intro_2.gd
+res://scripts/intro_2.tscn
+res://scripts/intro_3.gd
+res://scripts/intro_3.tscn

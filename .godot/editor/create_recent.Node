@@ -1,6 +1,8 @@
-AnimatedSprite2D
-Sprite2D
-CanvasModulate
+Control
+AudioStreamPlayer2D
 Button
+Sprite2D
 Label
+AnimatedSprite2D
+CanvasModulate
 TileMapLayer

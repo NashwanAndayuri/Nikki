@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="indomiegorengpakeayamgapaketelor"
-run/main_scene="uid://cjaybuwcfbiko"
+run/main_scene="uid://c2iu18vadcb7w"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://objects/player/icon.svg"
 

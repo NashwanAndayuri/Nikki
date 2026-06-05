@@ -1,5 +1,12 @@
 [gd_scene format=3 uid="uid://c2iu18vadcb7w"]
 
+[ext_resource type="Script" uid="uid://kg2xypf13igg" path="res://scenes/title_screen.gd" id="1_fgkus"]
+[ext_resource type="PackedScene" uid="uid://1nfdipe86i2h" path="res://scripts/intro_1.tscn" id="2_e54dn"]
+[ext_resource type="Texture2D" uid="uid://d0npxdwy8qx6c" path="res://assets/Nikki title screen.png" id="2_sa3yf"]
+[ext_resource type="PackedScene" uid="uid://dfn4bl7ihvy17" path="res://scripts/intro_2.tscn" id="3_3yumr"]
+[ext_resource type="AudioStream" uid="uid://ce6yjvli6fw6i" path="res://assets/she's not here anymore.mp3" id="3_s4lrb"]
+[ext_resource type="PackedScene" uid="uid://ctsl1qdby4pdp" path="res://scripts/intro_3.tscn" id="4_cs5ya"]
+
 [node name="TitleScreen" type="Control" unique_id=473760631]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +14,63 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fgkus")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1706992322]
+position = Vector2(453.11108, 354.4375)
+scale = Vector2(0.23744215, 0.23744212)
+texture = ExtResource("2_sa3yf")
+
+[node name="play" type="Button" parent="." unique_id=1022271512]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.037486218
+anchor_top = -0.09903714
+anchor_right = -0.037486218
+anchor_bottom = -0.09903714
+offset_left = 194.0
+offset_top = 380.0
+offset_right = 241.0
+offset_bottom = 411.0
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "PLAY
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="quit" type="Button" parent="." unique_id=259345808]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.035281148
+anchor_top = 0.019257221
+anchor_right = -0.035281148
+anchor_bottom = 0.019257221
+offset_left = 194.0
+offset_top = 380.0
+offset_right = 241.0
+offset_bottom = 411.0
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "QUIT
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="menu" type="AudioStreamPlayer2D" parent="." unique_id=310167488]
+stream = ExtResource("3_s4lrb")
+autoplay = true
+
+[node name="intro1" parent="." unique_id=407970248 instance=ExtResource("2_e54dn")]
+visible = false
+layout_mode = 1
+
+[node name="intro2" parent="." unique_id=1930480099 instance=ExtResource("3_3yumr")]
+visible = false
+layout_mode = 1
+
+[node name="intro3" parent="." unique_id=4449297 instance=ExtResource("4_cs5ya")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
