@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c3lfgymhsn4w2"]
 
-[ext_resource type="Script" uid="uid://mh3f1cvyetff" path="res://scripts/player.gd" id="1_43vyn"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_43vyn"]
 [ext_resource type="Texture2D" uid="uid://ur2thw2frcpv" path="res://assets/Nikki/Nikki idle-Sheet+.png" id="2_g7ett"]
 [ext_resource type="Texture2D" uid="uid://csgt7rhu8kskv" path="res://assets/Nikki/nikki jump.png" id="3_gnkmh"]
 [ext_resource type="Texture2D" uid="uid://l581fxei8xnk" path="res://assets/Nikki/nikki land.png" id="3_jnjyq"]
@@ -198,7 +198,7 @@ frame_progress = 1.0
 speed_scale = 1.51
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=694784351]
-position = Vector2(5, 2)
+position = Vector2(5, -2)
 shape = SubResource("CapsuleShape2D_g7ett")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1083075151]

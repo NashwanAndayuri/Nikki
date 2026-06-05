@@ -1,8 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1780648197
-::res://assets/::1780648604
+::res://::1780648967
+::res://assets/::1780648967
 29.5.26.png::CompressedTexture2D::7162709923344051002::1780648604::1780648606::1::::<><><>0<>0<>fd14fef7b9e17025b63d64cf1921cf8c<>res://.godot/imported/29.5.26.png-f0560edf24b2b79f2def586dcc2c6705.ctex::
 ENDFIELD_SHARE_1770465686.png::CompressedTexture2D::5942899526957437869::1780646496::1780646515::1::::<><><>0<>0<>a96500206ddbd5384c5d0f89d4ece52f<>res://.godot/imported/ENDFIELD_SHARE_1770465686.png-587aa7a389f3b3a97224caba27a00afa.ctex::
+faith.png::CompressedTexture2D::8090914156322822304::1780648901::1780648967::1::::<><><>0<>0<>442578c7d093924ad9a6d50bae20b102<>res://.godot/imported/faith.png-8f9f416a9a1112c7a1e32f912cf2f0dc.ctex::
 ::res://assets/Background layers/::1780646551
 Layer_0000_9.png::CompressedTexture2D::8468217095632325883::1780646421::1780646442::1::::<><><>0<>0<>e2fbc712d3c42628f7553bda4b21aa46<>res://.godot/imported/Layer_0000_9.png-ac96bf6f0b4e929fd4c3547481664d53.ctex::
 Layer_0001_8.png::CompressedTexture2D::8674989970083457718::1780646421::1780646442::1::::<><><>0<>0<>c1e3f6093ba38f12db6410333f470c0d<>res://.godot/imported/Layer_0001_8.png-9e2edcf05bb1f731c73e75e50f2abc09.ctex::
@@ -36,16 +37,16 @@ icon.svg::CompressedTexture2D::3448097631833146469::1780646421::1780646560::1:::
 player.tscn::PackedScene::6761152723713731811::1780646421::0::1::::<><><>0<>0<><>::uid://mh3f1cvyetff::::res://scripts/player.gd<>uid://ur2thw2frcpv::::res://assets/Nikki/Nikki idle-Sheet+.png<>uid://csgt7rhu8kskv::::res://assets/Nikki/nikki jump.png<>uid://l581fxei8xnk::::res://assets/Nikki/nikki land.png<>uid://br3qc72vggbab::::res://assets/Nikki/NIkki run-Sheet.png
 rope.tscn::PackedScene::410008952080391480::1780646560::0::1::::<><><>0<>0<><>::uid://bv1a8ug8oxjs1::::res://objects/player/SwingSwong.gd
 SwingSwong.gd::GDScript::-1::1780646421::0::1::::<>Node2D<><>0<>0<><>::
-::res://scenes/::1780648518
+::res://scenes/::1780648754
 camera_2d.tscn::PackedScene::7734541892914658679::1780646560::0::1::::<><><>0<>0<><>::
 enemy.tscn::PackedScene::4952240022027718468::1780646560::0::1::::<><><>0<>0<><>::uid://k0dljqs5btn0::::res://assets/Snail/Walk (38x24).png<>uid://bgugt633i663x::::res://scripts/enemy.gd
 kill_zone.tscn::PackedScene::7621463661329886738::1780646560::0::1::::<><><>0<>0<><>::uid://cmvd6qgyo3gey::::res://scripts/killzone.gd
 level0.tscn::PackedScene::997019442224608141::1780646560::0::1::::<><><>0<>0<><>::uid://c3lfgymhsn4w2::::res://objects/player/player.tscn<>uid://digw1l3pxr7xr::::res://scenes/camera_2d.tscn<>uid://bpejwt3vae7e4::::res://objects/player/icon.svg
 next_level_test.tscn::PackedScene::8016261581699578874::1780646560::0::1::::<><><>0<>0<><>::uid://ce76m3fwcg8gd::::res://scripts/next_level.gd<>uid://bpejwt3vae7e4::::res://objects/player/icon.svg
-test_level.tscn::PackedScene::5406001038299095066::1780648302::0::1::::<><><>0<>0<><>::uid://37x17n70byhm::::res://assets/Background layers/Layer_0002_7.png<>uid://cb304jh6m2eyd::::res://assets/Background layers/Layer_0006_4.png<>uid://dkns3ckve8i35::::res://assets/Background layers/Layer_0009_2.png<>uid://cdbcvk4chrkox::::res://levels/tileset.png<>uid://c3lfgymhsn4w2::::res://objects/player/player.tscn<>uid://ccs5w1dgv7uqe::::res://scenes/enemy.tscn<>uid://f3u11nm8uydc::::res://objects/player/rope.tscn<>uid://dmhewltddbel3::::res://scenes/next_level_test.tscn
+test_level.tscn::PackedScene::5406001038299095066::1780648754::0::1::::<><><>0<>0<><>::uid://37x17n70byhm::::res://assets/Background layers/Layer_0002_7.png<>uid://cb304jh6m2eyd::::res://assets/Background layers/Layer_0006_4.png<>uid://dkns3ckve8i35::::res://assets/Background layers/Layer_0009_2.png<>uid://cdbcvk4chrkox::::res://levels/tileset.png<>uid://c3lfgymhsn4w2::::res://objects/player/player.tscn<>uid://ccs5w1dgv7uqe::::res://scenes/enemy.tscn<>uid://f3u11nm8uydc::::res://objects/player/rope.tscn<>uid://dmhewltddbel3::::res://scenes/next_level_test.tscn
 thelevel.tscn::PackedScene::8173155788290851084::1780646421::0::1::::<><><>0<>0<><>::uid://ctiuvun7vo7ot::::res://scripts/main.gd<>uid://c3lfgymhsn4w2::::res://objects/player/player.tscn<>uid://cdbcvk4chrkox::::res://levels/tileset.png<>uid://37x17n70byhm::::res://assets/Background layers/Layer_0002_7.png<>uid://cb304jh6m2eyd::::res://assets/Background layers/Layer_0006_4.png<>uid://dkns3ckve8i35::::res://assets/Background layers/Layer_0009_2.png<>uid://dgt5nmkf1818a::::res://scenes/kill_zone.tscn<>uid://dmhewltddbel3::::res://scenes/next_level_test.tscn<>uid://ccs5w1dgv7uqe::::res://scenes/enemy.tscn<>uid://f3u11nm8uydc::::res://objects/player/rope.tscn
 title_screen.tscn::PackedScene::-1::1780646514::0::1::::<><><>0<>0<><>::
-win_screen.tscn::PackedScene::5810531485175643516::1780648518::0::1::::<><><>0<>0<><>::res://scripts/win_screen.gd<>uid://cqw1xmdrk7uob::::res://assets/ENDFIELD_SHARE_1770465686.png
+win_screen.tscn::PackedScene::5810531485175643516::1780648641::0::1::::<><><>0<>0<><>::res://scripts/win_screen.gd<>uid://dabw1ytcti50a::::res://assets/29.5.26.png
 ::res://scripts/::1780648302
 camera_2d.gd::GDScript::-1::1780646421::0::1::::<>Camera2D<><>0<>0<><>::
 enemy.gd::GDScript::-1::1780646421::0::1::::<>Area2D<><>0<>0<><>::

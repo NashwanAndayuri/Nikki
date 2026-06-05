@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://co1wus7o6xdai"]
 
-[ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_wv5lq"]
+[ext_resource type="Script" uid="uid://c6keh7fisubav" path="res://scripts/win_screen.gd" id="1_wv5lq"]
 [ext_resource type="Texture2D" uid="uid://dabw1ytcti50a" path="res://assets/29.5.26.png" id="2_erk2x"]
 
 [node name="WinScreen" type="Control" unique_id=1569122770]
